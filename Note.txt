@@ -10,3 +10,4 @@ https://redux-toolkit.js.org/tutorials/quick-start
 
 PS C:\react> npx create-react-app react-redux-todo-app  --use-npm
 PS C:\react\react-redux-todo-app\app> npm install @reduxjs/toolkit react-redux
+PS C:\react\react-redux-todo-app\app> npm install bootstrap@4
