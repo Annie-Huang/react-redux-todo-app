@@ -17,3 +17,6 @@ PS C:\react\react-redux-todo-app\app> npm install bootstrap@4
 PS C:\react\react-redux-todo-app\app> npm run start
 PS C:\react\react-redux-todo-app\api> npm run server
 
+In the redux dev tool, you can see
+- todos/getTodosAsync/pending       >> show initial data from todoSlice
+- todos/getTodosAsync/fulfilled     >> replace with data from api response
