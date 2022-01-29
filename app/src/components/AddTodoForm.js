@@ -28,7 +28,7 @@ const AddTodoForm = () => {
         onChange={(event) => setValue(event.target.value)}
       ></input>
 
-      <button type='submit' className='btn btn-primary mb-2'>
+      <button type='submit' className='btn btn-primary mb-2' disabled={!value}>
         Submit
       </button>
     </form>
