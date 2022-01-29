@@ -4,6 +4,9 @@ React Redux Todo App Tutorial | Learn Redux with Redux Toolkit
 https://github.com/chrisblakely01/react-redux-todo-app
 https://github.com/Annie-Huang/react-redux-todo-app
 
+https://redux-toolkit.js.org/tutorials/quick-start
+
 ========================================================================
 
 PS C:\react> npx create-react-app react-redux-todo-app  --use-npm
+PS C:\react\react-redux-todo-app\app> npm install @reduxjs/toolkit react-redux
