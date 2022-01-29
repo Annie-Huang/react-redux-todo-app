@@ -5,3 +5,5 @@ https://github.com/chrisblakely01/react-redux-todo-app
 https://github.com/Annie-Huang/react-redux-todo-app
 
 ========================================================================
+
+PS C:\react> npx create-react-app react-redux-todo-app  --use-npm
