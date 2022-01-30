@@ -14,7 +14,7 @@ export const getTodosAsync = createAsyncThunk(
   }
 );
 
-export const addTodosAsync = createAsyncThunk(
+export const addTodoAsync = createAsyncThunk(
   'todos/addTodoAsync',
   async (payload) => {
     const response = await fetch('http://localhost:7000/todos', {
@@ -24,8 +24,8 @@ export const addTodosAsync = createAsyncThunk(
     });
 
     if (response.ok) {
-      const todos = await response.json();
-      return { todos };
+      const todo = await response.json();
+      return { todo };
     }
   }
 );
@@ -66,6 +66,9 @@ const todoSlice = createSlice({
     [getTodosAsync.fulfilled]: (state, action) => {
       console.log('fetching data successfully!');
       return action.payload.todos;
+    },
+    [addTodoAsync.fulfilled]: (state, action) => {
+      state.push(action.payload.todo);
     },
   },
 });
