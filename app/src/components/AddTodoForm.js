@@ -9,11 +9,18 @@ const AddTodoForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+
+    /*    dispatch(
+      addTodo({
+        title: value,
+      })
+    );*/
     dispatch(
       addTodoAsync({
         title: value,
       })
     );
+
     setValue('');
   };
 
