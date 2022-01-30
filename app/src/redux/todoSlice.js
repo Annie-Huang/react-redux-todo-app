@@ -53,9 +53,15 @@ export const deleteTodoAsync = createAsyncThunk(
       method: 'DELETE',
     });
 
+    /*    // My solution of deleteTodoAsync
     if (response.ok) {
       const todos = await response.json();
       return { todos };
+    }*/
+
+    // Author's solution of deleteTodoAsync. It really depend on what api returns.
+    if (response.ok) {
+      return { id: payload.id };
     }
   }
 );
@@ -105,7 +111,11 @@ const todoSlice = createSlice({
       state[index].completed = action.payload.completed;
     },
     [deleteTodoAsync.fulfilled]: (state, action) => {
-      return action.payload.todos;
+      // My solution of deleteTodoAsync
+      // return action.payload.todos;
+
+      // Author's solution of deleteTodoAsync.
+      return state.filter((todo) => todo.id !== action.payload.id);
     },
   },
 });
