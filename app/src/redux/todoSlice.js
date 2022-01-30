@@ -86,6 +86,10 @@ const todoSlice = createSlice({
     [addTodoAsync.fulfilled]: (state, action) => {
       state.push(action.payload.todo);
     },
+    [toggleCompleteAsync.fulfilled]: (state, action) => {
+      const index = state.findIndex((todo) => todo.id === action.payload.id);
+      state[index].completed = action.payload.completed;
+    },
   },
 });
 
